@@ -33,12 +33,12 @@ export const professionals = [
   { id: 'bia', name: 'Bia Souza', role: 'Make & olhar', bio: 'Maquiagem fresca para destacar a sua melhor versão.', image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=700&q=85' },
 ]
 export const services = [
-  { id: 'corte', name: 'Corte & finalização', category: 'Cabelos', duration: 60, buffer: 0, price: 160, priceMode: 'fixed', durationMode: 'fixed', includes: 'Lavagem, corte e finalização.', professionalIds: ['ana'], description: 'Corte pensado para sua rotina, com finalização leve.' },
-  { id: 'cor', name: 'Coloração com brilho', category: 'Cabelos', duration: 150, buffer: 15, price: 390, priceMode: 'from', durationMode: 'fixed', note: 'Valor final confirmado após avaliação.', professionalIds: ['ana'], description: 'Cor personalizada, brilho e tratamento em cada fio.' },
-  { id: 'unhas', name: 'Manicure Aura', category: 'Unhas', duration: 60, buffer: 0, price: 85, professionalIds: ['luiza'], description: 'Cuidado completo com acabamento impecável.' },
-  { id: 'nail-art', name: 'Nail art minimal', category: 'Unhas', duration: 90, buffer: 10, price: 130, professionalIds: ['luiza'], description: 'Detalhes autorais para unhas que contam histórias.' },
-  { id: 'make', name: 'Make fresh', category: 'Make', duration: 75, buffer: 0, price: 220, professionalIds: ['bia'], description: 'Uma produção fresca, luminosa e muito você.' },
-  { id: 'sobrancelhas', name: 'Design de sobrancelhas', category: 'Olhar', duration: 45, buffer: 0, price: 70, professionalIds: ['bia'], description: 'Desenho que respeita o seu rosto e o seu estilo.' },
+  { id: 'corte', name: 'Corte & finalização', ctaLabel: 'Quero horário para corte', category: 'Cabelos', duration: 60, buffer: 0, price: 160, priceMode: 'fixed', durationMode: 'fixed', includes: 'Lavagem, corte e finalização.', professionalIds: ['ana'], description: 'Corte pensado para sua rotina, com finalização leve.' },
+  { id: 'cor', name: 'Coloração com brilho', ctaLabel: 'Quero horário para coloração', category: 'Cabelos', duration: 150, buffer: 15, price: 390, priceMode: 'from', durationMode: 'fixed', note: 'Valor final confirmado após avaliação.', professionalIds: ['ana'], description: 'Cor personalizada, brilho e tratamento em cada fio.' },
+  { id: 'unhas', name: 'Manicure Aura', ctaLabel: 'Quero horário para manicure', category: 'Unhas', duration: 60, buffer: 0, price: 85, professionalIds: ['luiza'], description: 'Cuidado completo com acabamento impecável.' },
+  { id: 'nail-art', name: 'Nail art minimal', ctaLabel: 'Quero horário para nail art', category: 'Unhas', duration: 90, buffer: 10, price: 130, professionalIds: ['luiza'], description: 'Detalhes autorais para unhas que contam histórias.' },
+  { id: 'make', name: 'Make fresh', ctaLabel: 'Quero horário para maquiagem', category: 'Make', duration: 75, buffer: 0, price: 220, professionalIds: ['bia'], description: 'Uma produção fresca, luminosa e muito você.' },
+  { id: 'sobrancelhas', name: 'Design de sobrancelhas', ctaLabel: 'Quero horário para sobrancelhas', category: 'Olhar', duration: 45, buffer: 0, price: 70, professionalIds: ['bia'], description: 'Desenho que respeita o seu rosto e o seu estilo.' },
 ]
 const hair = [
   ['hair-1','Cabelos','https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=85','Corte de cabelo em camadas'],
