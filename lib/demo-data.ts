@@ -61,13 +61,13 @@ const makeup = [
   ['make-4','Make','https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=900&q=85','Cosméticos para maquiagem'],
   ['make-5','Make','https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=85','Maquiagem profissional finalizada'],
 ]
-const eyes = [
-  ['eyes-1','Olhar','/results/brows-result.png','Design de sobrancelhas'],
-  ['eyes-2','Olhar','/images/cilios-definidos.png','Design de sobrancelhas e olhar definido'],
-  ['eyes-3','Olhar','/results/brows-result.png','Design de sobrancelhas'],
-  ['eyes-4','Olhar','/images/cilios-definidos.png','Design de sobrancelhas e área dos olhos'],
-  ['eyes-5','Olhar','/results/brows-result.png','Resultado de design de sobrancelhas'],
-]
+  const eyes = [
+  ['eyes-1','Olhar','/results/brows-result.png','Resultado de sobrancelhas'],
+  ['eyes-2','Olhar','/images/cilios-definidos.png','Cílios definidos'],
+  ['eyes-3','Olhar','https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=85','Olhar realçado'],
+  ['eyes-4','Olhar','https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=85','Detalhe da área dos olhos'],
+  ['eyes-5','Olhar','https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=85','Beleza natural do olhar'],
+  ]
 const categoryService: Record<string, string> = { Cabelos: 'corte', Unhas: 'unhas', Make: 'make', Olhar: 'sobrancelhas' }
 const toGallery = (items: string[][]) => items.map(([id, category, src, alt]) => ({ id, category, src, alt, title: alt, presentation: 'reference' as const, relatedServiceId: categoryService[category] }))
 export const portfolioByCategory = { Cabelos: toGallery(hair), Unhas: toGallery(nails), Make: toGallery(makeup), Olhar: toGallery(eyes) }
@@ -77,7 +77,7 @@ export const gallery = [
   { ...portfolioByCategory.Unhas[0], relatedServiceId: 'unhas' },
   { ...portfolioByCategory.Unhas[1], relatedServiceId: 'nail-art' },
   { ...portfolioByCategory.Make[0], relatedServiceId: 'make' },
-  { id: 'brows-result', category: 'Olhar', src: '/results/brows-result.png', alt: 'Design de sobrancelhas', title: 'Design de sobrancelhas', presentation: 'reference' as const, relatedServiceId: 'sobrancelhas' },
+  { id: 'brows-result', category: 'Olhar', src: '/results/brows-result.png', alt: 'Realce do olhar', title: 'Realce do olhar', presentation: 'reference' as const, relatedServiceId: 'sobrancelhas' },
 ]
 export type AppointmentStatus = 'agendado' | 'confirmado' | 'em atendimento' | 'finalizado' | 'cancelado' | 'faltou'
 export type Appointment = { id: string; client: string; phone: string; serviceId: string; professionalId: string; date: string; time: string; status: AppointmentStatus; notes?: string }
