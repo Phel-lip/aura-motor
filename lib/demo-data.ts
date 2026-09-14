@@ -64,9 +64,9 @@ const makeup = [
   const eyes = [
   ['eyes-1','Olhar','/results/brows-result.png','Resultado de sobrancelhas'],
   ['eyes-2','Olhar','/images/cilios-definidos.png','Cílios definidos'],
-  ['eyes-3','Olhar','https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=85','Olhar realçado'],
-  ['eyes-4','Olhar','https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=85','Detalhe da área dos olhos'],
-  ['eyes-5','Olhar','https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=85','Beleza natural do olhar'],
+  ['eyes-3','Olhar','/results/brows-close-result.png','Sobrancelhas desenhadas com naturalidade'],
+  ['eyes-4','Olhar','/results/brows-procedure-result.png','Mapeamento e design de sobrancelhas'],
+  ['eyes-5','Olhar','/results/lashes-close-result.png','Detalhe de cílios e olhar definido'],
   ]
 const categoryService: Record<string, string> = { Cabelos: 'corte', Unhas: 'unhas', Make: 'make', Olhar: 'sobrancelhas' }
 const toGallery = (items: string[][]) => items.map(([id, category, src, alt]) => ({ id, category, src, alt, title: alt, presentation: 'reference' as const, relatedServiceId: categoryService[category] }))
