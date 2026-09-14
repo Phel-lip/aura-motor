@@ -71,7 +71,14 @@ const eyes = [
 const categoryService: Record<string, string> = { Cabelos: 'corte', Unhas: 'unhas', Make: 'make', Olhar: 'sobrancelhas' }
 const toGallery = (items: string[][]) => items.map(([id, category, src, alt]) => ({ id, category, src, alt, title: alt, presentation: 'reference' as const, relatedServiceId: categoryService[category] }))
 export const portfolioByCategory = { Cabelos: toGallery(hair), Unhas: toGallery(nails), Make: toGallery(makeup), Olhar: toGallery(eyes) }
-export const gallery = [portfolioByCategory.Cabelos[0], portfolioByCategory.Unhas[0], portfolioByCategory.Make[0], portfolioByCategory.Olhar[0], portfolioByCategory.Cabelos[1], portfolioByCategory.Unhas[1]]
+export const gallery = [
+  { ...portfolioByCategory.Cabelos[0], relatedServiceId: 'corte' },
+  { id: 'hair-color-result', category: 'Cabelos', src: '/results/hair-color-result.png', alt: 'Coloração com brilho', title: 'Coloração com brilho', presentation: 'reference' as const, relatedServiceId: 'cor' },
+  { ...portfolioByCategory.Unhas[0], relatedServiceId: 'unhas' },
+  { ...portfolioByCategory.Unhas[1], relatedServiceId: 'nail-art' },
+  { ...portfolioByCategory.Make[0], relatedServiceId: 'make' },
+  { id: 'brows-result', category: 'Olhar', src: '/results/brows-result.png', alt: 'Design de sobrancelhas', title: 'Design de sobrancelhas', presentation: 'reference' as const, relatedServiceId: 'sobrancelhas' },
+]
 export type AppointmentStatus = 'agendado' | 'confirmado' | 'em atendimento' | 'finalizado' | 'cancelado' | 'faltou'
 export type Appointment = { id: string; client: string; phone: string; serviceId: string; professionalId: string; date: string; time: string; status: AppointmentStatus; notes?: string }
 export const initialAppointments: Appointment[] = [
