@@ -62,11 +62,11 @@ const makeup = [
   ['make-5','Make','https://images.unsplash.com/photo-1487412912498-0447578fcca8?auto=format&fit=crop&w=900&q=85','Maquiagem profissional finalizada'],
 ]
 const eyes = [
-  ['eyes-1','Olhar','https://images.unsplash.com/photo-1583001809873-a128495da465?auto=format&fit=crop&w=900&q=85','Cílios destacados'],
-  ['eyes-2','Olhar','https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=900&q=85','Design de sobrancelhas'],
-  ['eyes-3','Olhar','/images/cilios-definidos.png','Cílios definidos'],
-  ['eyes-4','Olhar','https://images.unsplash.com/photo-1517365830460-955ce3ccd263?auto=format&fit=crop&w=900&q=85','Beleza do olhar'],
-  ['eyes-5','Olhar','https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?auto=format&fit=crop&w=900&q=85','Cílios e sobrancelhas definidos'],
+  ['eyes-1','Olhar','/results/brows-result.png','Design de sobrancelhas'],
+  ['eyes-2','Olhar','/images/cilios-definidos.png','Design de sobrancelhas e olhar definido'],
+  ['eyes-3','Olhar','/results/brows-result.png','Design de sobrancelhas'],
+  ['eyes-4','Olhar','/images/cilios-definidos.png','Design de sobrancelhas e área dos olhos'],
+  ['eyes-5','Olhar','/results/brows-result.png','Resultado de design de sobrancelhas'],
 ]
 const categoryService: Record<string, string> = { Cabelos: 'corte', Unhas: 'unhas', Make: 'make', Olhar: 'sobrancelhas' }
 const toGallery = (items: string[][]) => items.map(([id, category, src, alt]) => ({ id, category, src, alt, title: alt, presentation: 'reference' as const, relatedServiceId: categoryService[category] }))
